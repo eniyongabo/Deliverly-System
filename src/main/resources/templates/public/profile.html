@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      layout:decorate="~{layouts/master-layout}">
+<head>
+  <title>Online Package Tracking Service - Profile</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+    <section class="breadcrumbs-area parallex">
+        <div class="container">
+            <div class="row">
+                <div class="page-title">
+                    <div class="col-sm-12 col-md-6 page-heading text-left">
+                        <h3>my account </h3>
+                        <h2>My Profile</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <ul class="breadcrumbs">
+                            <li><a href="/">home</a></li>
+                            <li><a href="#">profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+
+    <!-- =-=-=-=-=-=-= Blog & News =-=-=-=-=-=-= -->
+    <section id="blog" class="custom-padding">
+        <div class="container">
+            <!-- Row -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="row">
+
+                        <div class="profile-section margin-bottom-20">
+                            <div class="profile-tabs">
+                                <ul class="nav nav-justified nav-tabs">
+                                    <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="profile-edit tab-pane fade in active" id="profile">
+                                        <h2 class="heading-md">Manage your Name, ID and Email Addresses.</h2>
+                                        <p>Below are the name and email addresses on file for your account.</p>
+                                        <br>
+                                        <dl class="dl-horizontal">
+                                            <dt><strong>Your name </strong></dt>
+                                            <dd th:text="${user.fullName}" >
+                                            </dd>
+                                            <hr>
+                                            <dt><strong>Your ID </strong></dt>
+                                            <dd th:text="${user.userId}">
+                                            </dd>
+
+                                            <hr>
+                                            <dt><strong>Email Address </strong></dt>
+                                            <dd th:text="${user.email}">
+                                            </dd>
+                                            <hr>
+
+                                            <dt><strong>Phone Number </strong></dt>
+                                            <dd th:text="${user.phoneNumber}">
+                                            </dd>
+                                            <hr>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Row End -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- =-=-=-=-=-=-= Blog & News end =-=-=-=-=-=-= -->
+
+</div>
+
+<th:block layout:fragment="footer"></th:block>
+
+<div layout:fragment="jscontent">
+  <script type="text/javascript">
+
+      </script>
+</div>
+</body>
+</html>
