@@ -1,2 +1,2 @@
 # SE
-Software Engineering course project
+Software Engineering course project.
